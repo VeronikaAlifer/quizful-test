@@ -3,27 +3,22 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage extends Page {
+public class LoginPage {
 	
-	By login = By.id("login");
-	By password = By.name("loginForm.password");
-	By loginButton = By.name("ok");
+	private static final By login = By.id("login");
+	private static final By password = By.name("loginForm.password");
+	private static final By loginButton = By.name("ok");
+	private WebDriver driver;
 	
-	public void typeLogin(String myLogin){
+	public void toLogin(String myLogin, String myPassword){
 		driver.findElement(login).sendKeys(myLogin);
-	}
-	
-	public void typePassword(String myPassword){
 		driver.findElement(password).sendKeys(myPassword);
-	}
-	
-	public void clickOnLoginButton(){
 		driver.findElement(loginButton).click();
 	}
 	
 	
 	public LoginPage(WebDriver driver) {
-		super(driver);
+		this.driver = driver;
 		
 	}
 
