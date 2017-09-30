@@ -4,13 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class ProfileNotificationsForm extends Page {
-	By notification = By.xpath("//div[@id='profile-notifications-form']/div[@class='title']");
-	By saveButton = By.name("notificationsForm.save");
-	By notificationsEnabled = By.name("notificationsForm.notificationsEnabled");
-	By deliveryEnabled = By.name("notificationsForm.deliveryEnabled");
+	
+	private static final By notification = By.xpath("//div[@id='profile-notifications-form']/div[@class='title']");
+	private static final By saveButton = By.name("notificationsForm.save");
+	private static final By notificationsEnabled = By.name("notificationsForm.notificationsEnabled");
+	private static final By deliveryEnabled = By.name("notificationsForm.deliveryEnabled");
 
 	public void clickOnNotification() {
-
 		driver.findElement(notification).click();
 	}
 
@@ -28,7 +28,5 @@ public class ProfileNotificationsForm extends Page {
 
 	public ProfileNotificationsForm(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
-
 }
