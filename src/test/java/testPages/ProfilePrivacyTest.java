@@ -1,7 +1,6 @@
 package testPages;
 
 import org.testng.annotations.Test;
-
 import base.BaseClass;
 import pages.ProfilePrivacyForm;
 

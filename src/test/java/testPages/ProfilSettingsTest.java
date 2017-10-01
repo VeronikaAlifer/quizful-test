@@ -1,8 +1,11 @@
 package testPages;
 
+import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import base.BaseClass;
 import pages.ProfilePersonalForm;
 
@@ -22,5 +25,8 @@ public class ProfilSettingsTest extends BaseClass {
 		pForm.uploadAvatar();
 		pForm.typePersonalInformation("I have a cat!!");
 		pForm.clickSaveButton();
+		List<WebElement> elements = driver.findElements(By.cssSelector("dl#personal-contacts dd"));
+		WebElement element = elements.get(1);
+		Assert.assertEquals(element.getText(), "Laura Palmer");
 	}
 }
