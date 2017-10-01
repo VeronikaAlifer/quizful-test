@@ -7,12 +7,12 @@ import pages.ProfileNotificationsForm;
 
 public class ProfileNotificationTest extends BaseClass {
 
-	@Test
-	public void verifyNotification() {
+	@Test(priority = 2)
+	public void testProfileNotification() {
 		ProfileNotificationsForm pForm = new ProfileNotificationsForm(driver);
-		pForm.clickOnNotification();
-		pForm.clickOnDeliveryEnabled();
-		pForm.clickOnNotificationEnable();
-		pForm.clickOnSaveButton();
+		pForm.clickNotification();
+		pForm.clickDeliveryEnabled();
+		pForm.clickNotificationEnable();
+		pForm.clickSaveButton();
 	}
 }

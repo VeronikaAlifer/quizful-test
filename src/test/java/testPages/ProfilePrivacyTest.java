@@ -7,8 +7,8 @@ import pages.ProfilePrivacyForm;
 
 public class ProfilePrivacyTest extends BaseClass{
 	
-	@Test
-	public void verifyRrivacy() throws InterruptedException{
+	@Test(priority = 3)
+	public void testProfilePrivacy() throws InterruptedException{
 		ProfilePrivacyForm pForm = new ProfilePrivacyForm(driver);
 		pForm.clickPrivacyField();
 		Thread.sleep(1000);

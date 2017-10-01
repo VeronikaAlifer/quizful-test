@@ -8,40 +8,19 @@ import pages.ProfilePersonalForm;
 
 public class ProfilSettingsTest extends BaseClass {
 
-	@Test
-	public void testPrifilePersonalForm() {
+	@Test(priority = 1)
+	public void testProfileSettingsForm() {
 		ProfilePersonalForm pForm = new ProfilePersonalForm(driver);
 		pForm.typeName("Laura");
 		pForm.typeSurname("Palmer");
-		pForm.typeBirthyear("1987");
+		pForm.typeBirthYear("1987");
 		pForm.typeCompanyName("Ledy");
 		pForm.typeSiteName("http://www.quizful.net");
 		pForm.chooseCountry();
 		pForm.chooseCity();
 		pForm.chooseZone();
-		pForm.downloadAvatar();
-		pForm.writePersonalInformation("I have a cat!!");
-		pForm.clickOnSaveButton();
+		pForm.uploadAvatar();
+		pForm.typePersonalInformation("I have a cat!!");
+		pForm.clickSaveButton();
 	}
-	
-	
-
-	// @Test
-	// public void testPrivacy() {
-	// Privacy privacy = new Privacy(driver);
-	// privacy.clickPrivacyField();
-	// privacy.clickProfileVisibility();
-	// }
-	//
-	// @Test
-	// public void testProfileNotificationsForm() throws InterruptedException {
-	// ProfileNotificationsForm pNotificationsForm = new
-	// ProfileNotificationsForm(driver);
-	// pNotificationsForm.clickOnNotification();
-	//
-	// Thread.sleep(1000);
-	// pNotificationsForm.clickOnNotificationEnable();
-	// pNotificationsForm.clickOnDeliveryEnabled();
-	// pNotificationsForm.clickOnSaveButton();
-	// }
 }

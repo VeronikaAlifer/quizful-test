@@ -9,13 +9,13 @@ public class LoginPage extends Page {
 	private static final By password = By.name("loginForm.password");
 	private static final By loginButton = By.name("ok");
 
-	public void login(String myLogin, String myPassword) {
-		driver.findElement(login).sendKeys(myLogin);
-		driver.findElement(password).sendKeys(myPassword);
-		driver.findElement(loginButton).click();
-	}
-
 	public LoginPage(WebDriver driver) {
 		super(driver);
+	}
+
+	public void login(String userLogin, String userPassword) {
+		driver.findElement(login).sendKeys(userLogin);
+		driver.findElement(password).sendKeys(userPassword);
+		driver.findElement(loginButton).click();
 	}
 }
