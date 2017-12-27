@@ -1,3 +1,3 @@
-Test project
+!!! Test project !!!
 
 # quizful-test
